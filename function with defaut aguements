@@ -1,0 +1,38 @@
+def calculator(num1, num2, operation="add"):
+    """
+    This function performs a basic calculator operation.
+    By default, it performs addition.
+    """
+    if operation == "add":
+        return num1 + num2
+    elif operation == "subtract":
+        return num1 - num2
+    elif operation == "multiply":
+        return num1 * num2
+    elif operation == "divide":
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero"
+    else:
+        return "Invalid operation"
+
+# Examples of calling the function with different operations
+
+# Case 1: Default operation (addition)
+print(calculator(10, 5))  # Output: 15 (default addition)
+
+# Case 2: Specified operation (subtraction)
+print(calculator(10, 5, "subtract"))  # Output: 5
+
+# Case 3: Specified operation (multiplication)
+print(calculator(10, 5, "multiply"))  # Output: 50
+
+# Case 4: Specified operation (division)
+print(calculator(10, 5, "divide"))  # Output: 2.0
+
+# Case 5: Division by zero
+print(calculator(10, 0, "divide"))  # Output: Error: Division by zero
+
+# Case 6: Invalid operation
+print(calculator(10, 5, "modulus")) 
